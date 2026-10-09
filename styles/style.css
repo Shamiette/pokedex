@@ -1,0 +1,405 @@
+@font-face{
+	font-family : myFontHeader ;
+	src : url(../fonts/PokemonSolid.ttf) ;
+}
+
+@font-face{
+	font-family : myFontHeader2 ;
+	src : url(../fonts/MistralRegular.tff) ;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container {
+    display: flex ;
+    align-items: center ; /* Centre verticalement */
+    justify-content: space-between ; /* Écarte les éléments */
+    background-color: rgb(181, 0, 0) ; /* Couleur d'arrière-plan */
+    padding: 0.8vw ;
+    width: 100% ;
+}
+
+.nom_page {
+    font-family: myFontHeader ;
+    text-shadow: rgb(77, 63, 206) 0.1em 0.1em ; /* Ombre sur l'écriture */
+    font-size: 3vw ;
+    color: rgb(241, 245, 0) ; /* Couleur de texte */
+}
+
+.img_right, .img_left {
+    width: 7vw ;
+    padding: 1vw ;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: rgb(0, 0, 0) ; /* Couleur */
+	position: sticky ;  /* Fixe la barre de lien en haut de l'écran */
+    top: 0 ;  /* Colle la barre de lien en haut ( enlève le petit espace ) */ 
+    width: 100% ; /* Fait toute la largeur du site */
+    z-index: 10 ; /* Permet que la barre nav soit bien au dessus de tout les autres items */
+}
+
+nav ul {
+    display: flex ;
+    list-style: none ; /* Enlève les puces sur la liste des liens */
+    flex-direction: row ; /* Met les liens sur une même ligne */
+    justify-content : flex-start ; /* Répartit le contenu sur la ligne */
+    font-weight: bold ; /* Met en gras */
+    font-size: 1.2vw ; /* Taille du texte */
+    margin: 0 ;
+    padding: 0 ;
+}
+
+nav ul li a {
+    text-decoration: none ; /* Enlève le soulignage */
+    color: rgb(255, 255, 255) ; /* Couleur de texte */
+    display: block; /* Permet à l'élément de prendre toute la largeur de son parent */
+    padding: 1.5vw ;
+}
+
+nav ul li a.active { /* Elément actif */
+    background-color : rgb(0, 92, 190) ; /* Couleur de fond */
+    color : rgb(255, 255, 255) ; /* Couleur du texte */
+}
+
+nav ul li a:hover {
+    color: rgb(22, 0, 220); /* Couleur de texte de survol */
+    background-color : rgb(193, 255, 253) ; /* Couleur de fond */
+}
+
+body{
+	display : flex ; 
+	flex-direction : column ;
+}
+
+img {
+	width : 60vh ;
+}
+
+footer {
+    display: flex ;
+    justify-content : space-between ; /* Répartit le contenu sur la ligne */
+    align-items : center ; /* Centre verticalement les éléments */
+    font-family : myFontHeader2 ;
+    background-color : rgb(190, 89, 89) ;
+    font-size: 1.2vw ;
+    padding : 1.2vw ;
+    width : 100% ;
+    position : relative ;
+    bottom : 0 ;
+    box-sizing: border-box;
+}
+
+.footer-group { /* . car c'est un groupe */
+    display : flex ;
+    gap : 2em ; /* Espacement entre Auteur et Contact */
+}
+
+.texte {
+    font-family : myFontHeader2 ;
+    font-size: 1.5vw ; /* Taille du texte */
+    margin-left: 1.5vw ;
+    margin-top: 2vw ;
+    margin-bottom: 2vw ;
+}
+
+.titre {
+    font-size: 3vw ; /* Taille du texte */
+    font-family : myFontHeader ;
+    margin-top : 0.5vw ;
+    margin-bottom : 0.2vw ;
+    font-weight: bold ; /* Met en gras */
+    color :rgb(0, 0, 0) ;
+    text-decoration : underline ;
+}
+
+.lien {
+    font-size: 2em ; /* Taille du texte */
+    font-family : myFontHeader2 ;
+    margin-top : 0.5em ;
+    margin-bottom : 0.2em ;
+    font-weight: bold ; /* Met en gras */
+    color :rgb(255, 255, 255);
+    text-decoration : none ; /* Enlève le soulignage */
+    padding : 1em ;
+}
+
+/* structure du pokedex */
+
+.pokedex-container {
+    display : flex ;
+    flex-wrap : wrap ;
+    gap : 20px ;
+    justify-content : center ;
+    padding : 20px ;
+}
+
+.pokemon-card {
+    background-color : rgb(230, 230, 230) ;
+    border-radius : 12px ;
+    box-shadow : 0 4px 6px rgb(194, 194, 194) ;
+    width : 10vw ;
+    height : auto ;
+    text-align : center ;
+    padding : 15px ;
+}
+
+.pokemon-card-water {
+    background-color : rgb(220, 226, 255) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(172, 173, 203) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-plante {
+    background-color : rgb(220, 255, 227) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(172, 203, 176) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-feu {
+    background-color : rgb(255, 220, 220) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(203, 172, 172) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-electrique {
+    background-color : rgb(250, 255, 220) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(203, 200, 172) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-vol {
+    background-color : rgb(220, 251, 255) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(172, 202, 203) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-sol {
+    background-color : rgb(255, 243, 220) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(203, 191, 172) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-poison {
+    background-color : rgb(246, 220, 255) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(195, 172, 203) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-normal {
+    background-color : rgb(236, 236, 236) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(210, 210, 210) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-insecte {
+    background-color : rgb(243, 255, 220) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(195, 203, 172) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-psy {
+    background-color : rgb(255, 220, 249) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(203, 172, 192) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-combat {
+    background-color : rgb(255, 234, 220) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(203, 187, 172) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-dragon {
+    background-color : rgb(220, 255, 243) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(172, 203, 192) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-card-glace {
+    background-color : rgb(220, 255, 254) ;
+    border-radius : 12px;
+    box-shadow : 0 4px 6px rgb(172, 203, 203) ;
+    width : 80vw ;
+    height : auto ;
+    text-align : center;
+    padding : 15px ;
+}
+
+.pokemon-image {
+    width: 8vw ;
+    height: auto ;
+    object-fit: contain ;
+    margin : 0.5vw ;
+}
+
+.pokemon-name {
+    font-size: 1.8vw ;
+    font-weight: bold ;
+    margin-top: 1vw ;
+    margin : 0.5vw ;
+}
+
+.pokemon-numero {
+    font-size: 1.5vw ;
+    color: rgb(75, 75, 75) ;
+    margin : 0.5vw ;
+}
+
+.pokemon-description{
+    font-size: 1.2vw ;
+    color: rgb(0, 0, 0) ;
+    margin : 0.5vw ;
+}
+
+.pokemon-type {
+    font-size: 1.5vw ;
+    color: rgb(0, 0, 0) ;
+    margin : 0.5vw ;
+}
+
+.pokemon-attaque {
+    display: flex ;
+    flex-wrap: wrap ;
+    justify-content: center ;
+    gap: 1vw ;
+    margin-top: 1vw ;
+}
+
+.pokemon-attaque-card {
+    background-color: rgb(255, 255, 255) ;
+    border-radius: 8px ;
+    padding: 1vw ;
+    width: 10vw ;
+    box-shadow: 0 2px 4px rgb(222, 222, 222);
+    font-size: 1vw ;
+    text-align: left ;
+}
+
+.pokemon-evolue {
+    font-size: 1.5vw ;
+    font-weight: bold ;
+    color: rgb(0, 0, 0) ;
+    margin : 1vw ;
+}
+
+.titre_pokedex {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    font-size: 2vw ;
+}
+
+.text_pokedex {
+    font-size: 1.5vw ;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.4em ;
+    font-size: 1em ;
+    border: 1px solid rgb(0, 0, 0) ;
+    border-radius: 4px ;
+    box-sizing: border-box ;
+    margin-bottom: 3vw ;
+}
+
+.button {
+    margin: 1vw ; 
+    background-color: rgb(255, 137, 137) ;
+    padding: 1.4vw ;
+    font-weight: bold ;
+    font-size: 1vw ;
+    margin-bottom: 5vw ;
+}
+
+.opacity-low {
+    opacity: 0.2;
+}
+
+.opacity-card {
+    opacity: 0.8;
+}
+
+.pokeball {
+    width: 2vw;
+}
+
+.background1 {
+    background-image: url("../images/fond_pokedex.jpg");
+    background-size: 100vw auto;
+    background-repeat: repeat-y;
+    background-position: top center;
+    margin-top: 0;
+}
+
+.background2 {
+    background-image: url("../images/pokedex_background.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+    margin-top: 0;
+}
+
+.background3 {
+    background-image: url("../images/fond.jpg");
+    background-size: 100% 100%;
+    background-position: top center;
+    margin-top: 0;
+}
+
+.container_form {
+    margin-left : 25vw;
+    margin-right : 25vw;
+}
